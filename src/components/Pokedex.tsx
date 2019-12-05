@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Pokecard from './Pokecard'
 
 const Container = styled.div`
-  box-sizing: border-box;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 `
 
