@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-export interface PokeCardProps {
+export interface Pokemon {
   id: number
   name: string
   type: string
@@ -30,7 +30,7 @@ const Description = styled.div`
   margin-top: 50px;
 `
 
-const Pokecard: React.FC<PokeCardProps> = ({id, name, type, base_experience}) => {
+const Pokecard: React.FC<Pokemon> = ({id, name, type, base_experience}) => {
   const number = id.toString().padStart(3, '0');
   return (
     <Tile>
