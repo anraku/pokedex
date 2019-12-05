@@ -5,6 +5,7 @@ import App from './components/App';
 
 const Context = styled.div`
   background-color: #eceff1;
+  font-family: 'Work Sans';
 `
 
 ReactDOM.render(

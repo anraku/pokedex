@@ -8,29 +8,33 @@ const Container = styled.div`
   flex-wrap: wrap;
 `
 
+const Header = styled.div`
+  text-align: center; 
+`
+
+const PokedexWinner = styled.h1`
+  color: #4caf50;
+`
+
+const PokedexLoser = styled.h1`
+  color: #e91e63;
+`
+
 export interface Pokemons {
   pokemons: Pokemon[]
   exp: number
   winner: boolean
 }
 
-const Header = styled.div`
-  text-align: left;
-`
-
-const Title = styled.div`
-  color: gray;
-  font-size: 20px;
-  font-weight: 900;
-`
-
 const Pokedex: React.FC<Pokemons> = ({ pokemons, exp, winner }) => {
   return (
     <>
       <Header>
-        <Title>Pokedex!</Title>
-        <p>Total Exp: {exp}</p>
-        <p>{winner ? 'Win!' : 'Lose'}</p>
+        {winner ?
+          <PokedexWinner>Winner!</PokedexWinner> :
+          <PokedexLoser>Loser!</PokedexLoser>
+        }
+        <h4>Total Exp: {exp}</h4>
       </Header>
       <Container>
         {pokemons.map((pokemon, index) =>
